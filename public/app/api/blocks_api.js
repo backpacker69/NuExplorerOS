@@ -1050,7 +1050,7 @@ else{
             
     db.BlockCollection.find({"blockHeight":{"$gte":howNum}},function(err,docBlock){ 
                 
-        for(var b=0;b<num;b++){
+        for(var b=num-1;b>=0;b--){
             
           var bHash = docBlock[b].blockHash,
               bHeight = docBlock[b].blockHeight,
@@ -1129,8 +1129,8 @@ else{
         }
         else{
         
-        var end = 20*(parseInt(pageId));
-        var start = 20*(parseInt(pageId)-1);
+        var end = 20;
+        var start = 0;
         var blockCount = count.n; 
         var howNum = blockCount - (20*parseInt(pageId) );
         var searchy = {"$gte":howNum}
@@ -1147,7 +1147,7 @@ else{
             
     db.BlockCollection.find({"blockHeight":searchy},function(err,docBlock){ 
                 
-        for(var b=start;b<end;b++){
+        for(var b=end-1;b>=start;b--){
             
           var bHash = docBlock[b].blockHash,
               bHeight = docBlock[b].blockHeight,
