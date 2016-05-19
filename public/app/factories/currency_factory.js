@@ -31,7 +31,7 @@ function activate(){
 }
 
 function changeCur (newCurr){
-	var info = wsFactory.getWS();
+	var info = wsFactory.ws;
 	if (newCurr.name === 'USD'){
         return currencyFactory.price = info.statusDetails.USDprice,
         	   currencyFactory.priceBits = info.statusDetails.USDpriceBits,
