@@ -176,7 +176,7 @@ routerAPI.route('/networkInfo').get(status.statusInfoAPI);
 
 oplogBlock.on('insert', function(doc) {
 	
-	console.log(doc.bl);
+	console.log("block",doc.blockHeight);
 	var bHeight = doc.blockHeight;
     var bTimeStamp = doc.blockTimeStamp;
     var bSize = doc.blockSize;
