@@ -26,7 +26,7 @@
  <td>Total Transacted (NSR)</td>
  <td id="totalOutput" style="text-indent:50px;">
      
-     <font color='green' data-ng-if="ff.coin===true">{{blockData.totBlock | number}} NSR</font>
+     <font color='green' data-ng-if="ff.coin===true">{{blockData.totBlock}} NSR</font>
      <font color='green' data-ng-if="ff.coin===false">{{convertCurrency(blockData.totBlockInt,"NSR") | currency:cf.curr.icon }} {{cf.curr.name}}</font>
      
      </td>
@@ -37,7 +37,7 @@
  <td>Total Fees</td>
  <td id="fees" style="text-indent:50px;">
      
-    <font color='red' data-ng-if="ff.coin===true">{{blockData.totFee | number}} NSR</font>
+    <font color='red' data-ng-if="ff.coin===true">{{blockData.totFee}} NSR</font>
     <font color='red' data-ng-if="ff.coin===false">{{convertCurrency(blockData.totFeeInt,"NSR") | currency:cf.curr.icon }} {{cf.curr.name}}</font>
      
      
