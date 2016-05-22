@@ -3,9 +3,10 @@ angular.module('NE.currencyFactory', ['NE.apiFactory','NE.wsFactory','NE.functio
 
 var currencyFactory = {
 	currencies: [
-                     { id: 0, name: 'USD',             symbol:"USD", icon:"$" },
-                     { id: 1, name: 'EUR',             symbol:"EUR", icon:"\u20AC"},
-                     { id: 2, name: 'CNY',             symbol:"CNY", icon:"\u00A5"}
+                     { id: 0, name: 'NuShares/NuBits', symbol:"USD", icon:"$" },
+                     { id: 1, name: 'USD',             symbol:"USD", icon:"$" },
+                     { id: 2, name: 'EUR',             symbol:"EUR", icon:"\u20AC"},
+                     { id: 3, name: 'CNY',             symbol:"CNY", icon:"\u00A5"}
                     ],
     curr:{},
     price:0,
@@ -49,6 +50,9 @@ function changeCur (newCurr){
         	    currencyFactory.priceBits = info.statusDetails.CNYpriceBits,
         		currencyFactory.curr = newCurr,
         		functionFactory.ff.coin = false;
+    }
+    else {
+        functionFactory.ff.coin = true;
     }
 };
 
