@@ -29,8 +29,11 @@ deferred.resolve();
     .then(function(result){
     $scope.blockData = result.data;
     $scope.txData = result.data.tx;
-});
- };
+    $scope.bCusto = result.data.bCust;
+    $scope.bPRates = result.data.bPRates;
+    });
+   };
+
 function activate(){
 
     return  $scope.ff = functionFactory.ff,
