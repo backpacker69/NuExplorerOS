@@ -1,8 +1,6 @@
 nuexplorer
 ==========
 
-[![Join the chat at https://gitter.im/JetJet13/NuExplorerOS](https://badges.gitter.im/JetJet13/NuExplorerOS.svg)](https://gitter.im/JetJet13/NuExplorerOS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 ##Nu network Block Explorer
 NuExplorer is powered by MongoDB, Expressjs, Angularjs and Nodejs. Query for blocks, transactions, and addresses found in the Nu network (https://nubits.com).
 
@@ -94,7 +92,7 @@ at the bottom:
   - for linux: `blocknotify=/usr/bin/python /<folder-location>/NuExplorerOS/pythonparser/NuParserv007.py`
 10. now close and reopen nu.exe or nud.exe (whichever you prefer).
 11. start up the server with `node server.js`
-12. open your browser and visit `localhost:800`
+12. open your browser and visit `localhost:8000`
 
 DONE! Your setup and installation is complete.
 If your stuck, feel free to contact me at jgeorges371@gmail.com or write a github issue. 
