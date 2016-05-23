@@ -36,26 +36,26 @@ NuExplorer is powered by MongoDB, Expressjs, Angularjs and Nodejs. Query for blo
 3. Now we need to create a new database in mongo shell
   - for simplicity type `use BlockDB`
 4. Now we need to create collections in `BlockDB` to store our data
-  - to do this, type `db.createCollection('<CollectionName>')`
-    - replace `<CollectionName>` with the following names
-    - `BlockCollection`
-    - `ChartCollection`
-      - after creating `ChartCollection` paste the following commands in the mongo shell
-        - `db.ChartCollection.insert({ "_id":"orphan", "orph":[] })`
-        - `db.ChartCollection.insert({ "_id":"diff", "pos":[] })`
-        - `db.ChartCollection.insert({ "_id":"numtrans", "Bits":[], "Shares":[]})`
-    - `InputTxCollection`
-    - `MotionCollection`
-    - `OrphanBlockCollection`
-    - `OrphanTxCollection`
-    - `PeerCollection`
-    - `SharesAddressCollection`
-    - `StatusCollection`
-      - after creating `StatusCollection` paste the following commands in the mongo shell 
-        - `db.StatusCollection.insert({_id:"statusInfo"})`,
-        - `db.StatusCollection.insert({_id:"addressLeftOff","blockHeight":0})`
-    - `TxCollection`
-    - `VoteCollection`
+  - db.dropDatabase()
+  - db.createCollection('BlockCollection')
+  - db.BlockCollection.createIndex({blockHeight:1})
+  - db.BlockCollection.ensureIndex({blockCustodianVotes:1,blockHeight:-1})
+  - db.createCollection('ChartCollection')
+  - db.ChartCollection.insert({ "_id":"orphan", "orph":[] })
+  - db.ChartCollection.insert({ "_id":"diff", "pos":[] })
+  - db.ChartCollection.insert({ "_id":"numtrans", "Bits":[], "Shares":[]})
+  - db.createCollection('InputTxCollection')
+  - db.createCollection('MotionCollection')
+  - db.createCollection('OrphanBlockCollection')
+  - db.createCollection('OrphanTxCollection')
+  - db.createCollection('PeerCollection')
+  - db.createCollection('SharesAddressCollection')
+  - db.createCollection('StatusCollection')
+  - db.StatusCollection.insert({_id:"statusInfo"})
+  - db.StatusCollection.insert({_id:"addressLeftOff","blockHeight":0})
+  - db.createCollection('TxCollection')
+  - db.TxCollection.createIndex({forBlock:1})
+  - db.createCollection('VoteCollection')
 5. Double check that you have created all the collections by typing `show collections` in mongo shell.
 6. Now, depending on what OS your running, we have to create a `nu.conf` file.
   - if your on Windows, head to the folder `C:/users/<username>/appdata/roaming/nu/`

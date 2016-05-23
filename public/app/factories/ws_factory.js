@@ -7,10 +7,18 @@ var wsFactory = {
 	blockList:[],
 	txList:[]
 };
-var dataStream = $websocket('ws://localhost:800',{
+/*
+var dataStream = $websocket('ws://nuexplorer.ddns.net:8000',{
 	protocolVersion:8,
-	origin:'http://localhost:800/'
+	origin:'http://nuexplorer.ddns.net:8000/'
 }); // websocket connect url
+*/
+
+var dataStream = $websocket('ws://localhost:8000',{
+    protocolVersion:8,
+    origin:'http://localhost:8000/'
+}); // websocket connect url
+
 dataStream.onMessage(function(message){
 
 var data = JSON.parse(message.data);

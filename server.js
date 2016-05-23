@@ -24,15 +24,15 @@ var NBTaddresses = require('./public/app/api/nbt_addresses_api');
 var OplogWatcher = require('mongo-oplog-watcher');
 
 var oplogTx = new OplogWatcher({
-  host:"mongodb://<username>:<password>@localhost", oplogDb:'local?authSource=admin', ns: "BlockDB.TxCollection"
+  host:"mongodb://localhost", oplogDb:'local?authSource=admin', ns: "BlockDB.TxCollection"
 }); 
 
 var oplogBlock = new OplogWatcher({
-  host:"mongodb://<username>:<password>@localhost", oplogDb:'local?authSource=admin', ns: "BlockDB.BlockCollection"
+  host:"mongodb://localhost", oplogDb:'local?authSource=admin', ns: "BlockDB.BlockCollection"
 }); 
 
 var oplogStatus = new OplogWatcher({
-  host:"mongodb://<username>:<password>@localhost", oplogDb:'local?authSource=admin', ns: "BlockDB.StatusCollection"
+  host:"mongodb://localhost", oplogDb:'local?authSource=admin', ns: "BlockDB.StatusCollection"
 });
 
 
@@ -46,7 +46,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(__dirname + '/public')); // set the static files location
-app.set('port', 800);
+app.set('port', 8000);
 app.set('/',routes);
 app.get('/');
 var server = http.createServer(app).listen(app.get('port'),function() {

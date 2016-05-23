@@ -417,8 +417,8 @@ if(chain === 'main'){
                 }
                 
                 totCDD = totCDD + cdd   
-            console.log("Johny "+numeral(0).format('0,0.[000000]'));
-            console.log("Georges "+typeof(inputVal)); 
+            //console.log("Johny "+numeral(0).format('0,0.[000000]'));
+            //console.log("Georges "+typeof(inputVal)); 
             var Inputs       = { 
                                 prevTx: inTx,
                                 inScript:inScript,
@@ -1049,7 +1049,10 @@ else{
         var Blocks = [];
             
     db.BlockCollection.find({"blockHeight":{"$gte":howNum}},function(err,docBlock){ 
-                
+               if (docBlock.length != num) {
+                console.log("error",num,"!=",docBlock.length);
+                num = docBlock.length;
+                } 
         for(var b=num-1;b>=0;b--){
             
           var bHash = docBlock[b].blockHash,
