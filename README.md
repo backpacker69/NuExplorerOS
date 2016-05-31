@@ -38,6 +38,7 @@ NuExplorer is powered by MongoDB, Expressjs, Angularjs and Nodejs. Query for blo
   - db.createCollection('BlockCollection')
   - db.BlockCollection.createIndex({blockHeight:1})
   - db.BlockCollection.ensureIndex({blockCustodianVotes:1,blockHeight:-1})
+  - db.BlockCollection.ensureIndex({blockMotionVotes:1,blockHeight:-1})
   - db.createCollection('ChartCollection')
   - db.ChartCollection.insert({ "_id":"orphan", "orph":[] })
   - db.ChartCollection.insert({ "_id":"diff", "pos":[] })
