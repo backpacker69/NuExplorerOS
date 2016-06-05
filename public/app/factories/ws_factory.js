@@ -64,8 +64,8 @@ console.log(data);
 return {
 		ws:wsFactory,
 		getSD: function() {return apiFactory.getStatusDetails().success(function(data){wsFactory.statusDetails = data;})},
-		getBL: function() {return apiFactory.getBlockInfo(7).success(function(data){wsFactory.blockList = data;})}
-		
+		getBL: function() {return apiFactory.getBlockInfo(7).success(function(data){wsFactory.blockList = data;})},
+	    ds:dataStream	
 
 	 }      
 
