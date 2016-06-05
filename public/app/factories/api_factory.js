@@ -52,6 +52,10 @@ var apiFactory = {};
         $window.document.title = "Chart | Diff.";
         return $http.get('/api/diff');
     };
+    apiFactory.getParkedChart = function () {
+        $window.document.title = "Chart | Parked";
+        return $http.get('/api/parked');
+    };
     apiFactory.getSizeChart = function () {
         return $http.get('/api/size');  
     };

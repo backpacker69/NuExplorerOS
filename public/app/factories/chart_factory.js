@@ -5,6 +5,7 @@ angular.module('NE.chartFactory', ['NE.apiFactory']) //instantiates
 		posDiff: getDiffChart,
 		numTrans: getNumTransChart,
 		orphan: getOrphanChart,
+        parked: getParkedChart,
 		bSolved: getSolvedByChart,
 		toggleChart: toggleChart,
 
@@ -166,6 +167,51 @@ return {
         series: [{
             
             name: 'Blocks Minted',
+            data: response.data
+        }]
+  };
+};
+};
+
+function getParkedChart(){
+
+return apiFactory.getParkedChart().then(sendData);
+
+function sendData(response){
+
+return {
+   options:{
+    chart: {
+            type: 'line'
+
+        },
+    tooltip: {
+
+            valueSuffix: ''
+        }
+    },
+        title: {
+            text: 'Parked NuBits'
+        },
+        yAxis: {
+            min:0,
+            title: {
+                text: 'NuBits'
+            }
+        },
+        xAxis: {
+            type:'datetime'
+
+
+        },
+        subtitle:{
+
+                text: 'NuBits to remain parked until day'
+            } ,
+
+        series: [{
+
+            name: 'Parked NuBits',
             data: response.data
         }]
   };

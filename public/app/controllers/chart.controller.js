@@ -22,6 +22,11 @@ else if (whichChart === 'orphan'){
 		$scope.showChart = result;
 	});
 }
+else if (whichChart === 'parked'){
+    chartFactory.parked().then(function(result){
+        $scope.showChart = result;
+    });
+}
 else if (whichChart === 'solvedby'){
 	chartFactory.bSolved().then(function(result){
 		$scope.showChart = result;

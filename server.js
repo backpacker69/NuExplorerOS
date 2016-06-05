@@ -120,6 +120,8 @@ router.route('/size').get(charts.size);
 
 router.route('/numtrans').get(charts.numTrans);
 
+router.route('/parked').get(charts.parked);
+
 router.route('/orphan').get(charts.orphan);
 
 router.route('/solvedBy').get(charts.solvedBy);
