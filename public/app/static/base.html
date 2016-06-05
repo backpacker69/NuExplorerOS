@@ -1,12 +1,13 @@
 <div id="block1">
   <div id="Header"><a href="/"><img id="Logo" src="/app/assets/images/nuexplorerLogov3.png"/></a>
     <div id="navigate" data-ng-controller="NavigateController">
+      &nbsp;<br>
       <button ng-disabled="nf.home" data-ng-click="go('','home')" class="naviB">Home</button>
       <button ng-disabled="nf.status" data-ng-click="go('status','status')" class="naviB">Status</button>
       <button ng-disabled="nf.charts" data-ng-click="go('charts/posdiff','charts')" class="naviB">Charts</button>
       <button ng-disabled="nf.api" data-ng-click="go('apidocs','api')" class="naviBD">API</button>
       <button ng-disabled="nf.motions" data-ng-click="go('motions','motions')" class="naviB">Motions</button>
-      <button ng-disabled="nf.votes" data-ng-click="go('votes','votes')" class="naviB">Votes</button>
+      <button ng-disabled="nf.votes" data-ng-click="go('votes','votes')" class="naviB">Grants</button>
       <button ng-disabled="nf.orphans" data-ng-click="go('orphans/1','orphans')" class="naviB">Orphans</button>
     </div>
     <div id="currency" data-ng-controller="CurrencyController">
@@ -18,7 +19,7 @@
       Conn. {{s.statusDetails.conn}} &#183;
       Height {{s.statusDetails.blocks | number}} &#183;
       Shares Supply ~{{s.statusDetails.sSupply | number}} &#183; </font>
-      Bits Supply ~{{s.statusDetails.bSupply | number}} &#183; </font>
+      Bits Supply ~{{s.statusDetails.bSupply | number:0}} &#183; </font>
       NSR Price {{getCF.curr.icon}}{{getCF.price | number:4}} {{getCF.curr.symbol}} &#183;
       NBT Price {{getCF.priceBits | currency:getCF.curr.icon}} {{getCF.curr.symbol}}
     </div>

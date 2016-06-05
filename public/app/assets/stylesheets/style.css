@@ -114,14 +114,14 @@ a:hover{
 	
 	margin-left: 3%;
 	margin-top: 0.5%;
-    
+    float: left;
 }
 #navigate{
     
-    width: 500px;
+    /* width: 500px; */
     height: auto;
-     
-    margin: -50px auto;
+    float: left; 
+    /* margin: -50px auto; */
     
     
 }

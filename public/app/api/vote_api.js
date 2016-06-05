@@ -246,8 +246,14 @@ else{
             start   = doc_len - howNum;
             end     = doc_len; 
         }
+        if (start < 0) {
+            start = 0;
+        }
+        if (end > doc_len) {
+            end = doc_len;
+        }
+
         for(var d=start;d<end;d++){
-            
             var bHeight = doc[d].blockHeight,
                 bTimeStamp = doc[d].blockTimeStamp,
                 bCDD = parseInt(doc[d].blockCDD),

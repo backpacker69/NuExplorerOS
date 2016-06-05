@@ -10,7 +10,7 @@ exports.statusDetails = function(req, res){
            conn:info[0].Con,
            blocks:info[0].BlockCount,
            sSupply:info[0].SharesSupply,
-           bSupply:info[0].BitsSupply,
+           bSupply:info[0].BitsSupply - 4040000,
            USDprice:info[0].USDprice,
            USDpriceBits:info[0].USDpriceBits,
            EURprice:info[0].EURprice,
