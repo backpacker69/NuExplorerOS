@@ -1,5 +1,6 @@
 exports.db = require('mongojs').connect('mongodb://127.0.0.1:27017/BlockDB',
 	[
+    'BitsAddressCollection',
 	'BlockCollection',
 	'ChartCollection',
 	'InputTxCollection',

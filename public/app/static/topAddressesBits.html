@@ -28,8 +28,8 @@
             </td>
             <td class="tableDet">
             
-                <font data-ng-if="showPPC===true" >{{info.balance | number}} NBT</font>
-                <font data-ng-if="showPPC===false">{{convertCurrency(info.balance,"NBT",curr.symbol) | currency:curr.icon}}</font>
+                <font data-ng-if="ff.coin===true" >{{info.balance | number}} NBT</font>
+                <font data-ng-if="ff.coin===false">{{convertCurrency(info.balance,"NBT",curr.symbol) | currency:curr.icon}}</font>
                 <font color="grey"> ({{(info.balance/NBTsupply)*100 | number:2}}%)</font>
             </td>
             <td class="tableDet" style="text-align:center;">{{info.num_trans | number}}</td>

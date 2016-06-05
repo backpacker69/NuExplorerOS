@@ -45,9 +45,13 @@ function activate(){
 
 
 }])
-.controller('TopSharesAddressesController', [ '$scope','olFactory',
-function($scope,olFactory) {
+.controller('TopSharesAddressesController', [ '$scope','functionFactory','currencyFactory','olFactory',
+function($scope,functionFactory,currencyFactory,olFactory) {
 
+        $scope.ff = functionFactory.ff;
+        $scope.toggleCoin = functionFactory.toggleCoin;
+        $scope.convertCurrency = currencyFactory.convertCurrency;
+        $scope.cf = currencyFactory.getCF();
 
 olFactory.getRichNSR().then(function(result){
 		$scope.NSRaddresses = result.data.info;
@@ -55,9 +59,13 @@ olFactory.getRichNSR().then(function(result){
 });
 
 }])
-.controller('TopBitsAddressesController', [ '$scope','olFactory',
-function($scope,olFactory) {
+.controller('TopBitsAddressesController', [ '$scope','functionFactory','currencyFactory','olFactory',
+function($scope,functionFactory,currencyFactory,olFactory) {
 
+        $scope.ff = functionFactory.ff;
+        $scope.toggleCoin = functionFactory.toggleCoin;
+        $scope.convertCurrency = currencyFactory.convertCurrency;
+        $scope.cf = currencyFactory.getCF();
 
 olFactory.getRichNBT().then(function(result){
 		$scope.NBTaddresses = result.data.info;

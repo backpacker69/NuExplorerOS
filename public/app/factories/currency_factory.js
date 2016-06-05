@@ -28,7 +28,8 @@ function activate(){
     
 	return currencyFactory.price = info.statusDetails.USDprice,
 		   currencyFactory.priceBits = info.statusDetails.USDpriceBits,
-		   currencyFactory.curr = currencyFactory.currencies[0];
+		   currencyFactory.curr = currencyFactory.currencies[0],
+           functionFactory.ff.coin = true;
 }
 
 function changeCur (newCurr){

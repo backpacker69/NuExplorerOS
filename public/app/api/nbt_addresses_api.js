@@ -19,6 +19,7 @@ exports.topBitsAddresses = function(req,res){
             var NBTsupply = sInfo[0].BitsSupply;
             
         }
+var pInfo = [];
     
     db.BitsAddressCollection.find({}).sort({"balance":-1} ,function(error,peerDoc){
         
@@ -31,7 +32,7 @@ exports.topBitsAddresses = function(req,res){
                 peerDoc[b].rank = b+1;
                 pInfo.push(peerDoc[b]);
             }
-        res.send({'NBTsupply':NBTsupply ,"info":pInfo})
+        res.send({'NBTsupply':NBTsupply ,"info":pInfo});
         }
         
         
