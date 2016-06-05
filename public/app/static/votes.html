@@ -28,7 +28,7 @@
               </tr>         
             <tbody id='blockInfo' data-ng-repeat="cust in custData">
             <tr id="blockRow" class="animated fadeIn">
-            <td class="tableDet"><a data-ng-href="/votedfor/{{cust.address}}/1">{{cust.address}}</a> <a data-ng-if="cust.url !=='?' " href="{{cust.url}}" target="_blank"><i class="fa fa-external-link-square"></i></a></td>
+            <td class="tableDet"><a data-ng-href="/votedfor/{{cust.address}}/1">{{cust.address}}</a> <a href="https://discuss.nubits.com/search?q={{cust.address}}" target="_blank"><i class="fa fa-external-link-square"></i></a></td>
                 
                 <td    class="tableDet">{{cust.lasthundred}} <font color="grey">votes</font> 
                                     
