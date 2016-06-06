@@ -77,6 +77,13 @@ app.route('/').get(function (req, res) {
   res.render('./app/jade/layout.jade');
 });
 */
+// access control
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 var router = express.Router(); 				// get an instance of the express Router
 
