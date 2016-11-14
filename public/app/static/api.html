@@ -2,7 +2,7 @@
 <div id="apiDoc">
 <h1>API Documentation</h1>
 </div>
-<div id="apiHeader">Peerchain.co API's are free to use. Happy Coding.
+<div id="apiHeader">NuExplorer API's are free to use. Happy Coding.
     <br>
     Note: There are two versions of most values.The values with the suffix <code>Int</code> are meant for data manipulation and the other is for display.
 </div>
@@ -11,7 +11,7 @@
 <div id="blockAPI">
 <label><u>Block API</u></label>
 <ul>
-    <li><strong>Single Block</strong>, parameters : [ <font color="green">block height or block hash</font> ] <pre><code class="language-javascript">https://peerchain.co/api/v1/blockSingle/<font color="green">458</font></code></pre>
+    <li><strong>Single Block</strong>, parameters : [ <font color="green">block height or block hash</font> ] <pre><code class="language-javascript">https://nuexplorer.ddns.net/api/v1/blockSingle/<font color="green">458</font></code></pre>
     <div id="codeBox">
 <pre><code class="language-css">{
     "exists": <font color="#E85900">true</font>,   <font color="grey">//or false</font>
@@ -48,7 +48,7 @@
 }</code></pre>
 </div>
     </li>
-    <li><strong>Latest Block</strong>, parameters : [ none ] <pre><code class="language-javascript">https://peerchain.co/api/v1/blockLatest/</code></pre>
+    <li><strong>Latest Block</strong>, parameters : [ none ] <pre><code class="language-javascript">https://nuexplorer.ddns.net/api/v1/blockLatest/</code></pre>
      <div id="codeBox">
 <pre><code class="language-css">
 {
@@ -87,7 +87,7 @@
 </code></pre>
 </div>
     </li>
-    <li><strong>Block Exists</strong>, parameters : [ <font color="green">block height or block hash</font> ] <pre><code class="language-javascript">https://peerchain.co/api/v1/blockExist/<font color="green">458</font></code></pre>
+    <li><strong>Block Exists</strong>, parameters : [ <font color="green">block height or block hash</font> ] <pre><code class="language-javascript">https://nuexplorer.ddns.net/api/v1/blockExist/<font color="green">458</font></code></pre>
 <div id="codeBox">
 <pre><code class="language-css">{
     "exists": <font color="#E85900">true</font>   <font color="grey">//or false</font>   
@@ -99,7 +99,7 @@
 <div id="txAPI">
 <label><u>Transaction API</u></label>
 <ul>
-    <li><strong>Single Transaction</strong>, parameters : [ <font color="#FF004C">trans.</font> ] <pre><code class="language-javascript">https://peerchain.co/api/v1/txDetails/<font color="#FF004C">0fefa9706bb49ec...ae9bdf79aec2d3b680c23</font></code></pre>
+    <li><strong>Single Transaction</strong>, parameters : [ <font color="#FF004C">trans.</font> ] <pre><code class="language-javascript">https://nuexplorer.ddns.net/api/v1/txDetails/<font color="#FF004C">0fefa9706bb49ec...ae9bdf79aec2d3b680c23</font></code></pre>
     <div id="codeBox">
 <pre><code class="language-css">{
     "exists": <font color="#E85900">true</font>,   <font color="grey">//or false</font>
@@ -145,7 +145,7 @@
 }</code></pre>
 </div>
     </li>
-<li><strong>Transaction Exists</strong>, parameters : [ <font color="#FF004C">trans.</font> ] <pre><code class="language-javascript">https://peerchain.co/api/v1/txExist/<font color="#FF004C">0fefa9706bb49ec...ae9bdf79aec2d3b680c23</font></code></pre>
+<li><strong>Transaction Exists</strong>, parameters : [ <font color="#FF004C">trans.</font> ] <pre><code class="language-javascript">https://nuexplorer.ddns.net/api/v1/txExist/<font color="#FF004C">0fefa9706bb49ec...ae9bdf79aec2d3b680c23</font></code></pre>
 <div id="codeBox">
 <pre><code class="language-css">{
     "exists": <font color="#E85900">true</font>  <font color="grey">//or false</font>   
@@ -157,7 +157,7 @@
 <div id="addressAPI">
 <label><u>Address API</u></label>
 <ul>
-    <li><strong>Address Info</strong>, parameters : [ <font color="#006187">address</font> ] <pre><code class="language-javascript">https://peerchain.co/api/v1/addressInfo/<font color="#006187">PQ3MN6dnQmw34eFMcRPWuVsuW9eLBSfaEp</font></code></pre>
+    <li><strong>Address Info</strong>, parameters : [ <font color="#006187">address</font> ] <pre><code class="language-javascript">https://nuexplorer.ddns.net/api/v1/addressInfo/<font color="#006187">PQ3MN6dnQmw34eFMcRPWuVsuW9eLBSfaEp</font></code></pre>
     <div id="codeBox">
 <pre><code class="language-css">{
     "exists": <font color="#E85900">true</font>,   <font color="grey">//or false</font>
@@ -178,7 +178,7 @@
 }</code></pre>
 </div>
     </li>
-    <li><strong>Address Unspent Outputs</strong>, parameters : [ <font color="#006187">address</font> ], <font color="grey">(the response will show every unspent output)</font><pre><code class="language-javascript">https://peerchain.co/api/v1/addressUnspent/<font color="#006187">PEWpsR4nK4mMfZSEqMf9QhAmSwh5ceNY3t</font></code></pre>
+    <li><strong>Address Unspent Outputs</strong>, parameters : [ <font color="#006187">address</font> ], <font color="grey">(the response will show every unspent output)</font><pre><code class="language-javascript">https://nuexplorer.ddns.net/api/v1/addressUnspent/<font color="#006187">PEWpsR4nK4mMfZSEqMf9QhAmSwh5ceNY3t</font></code></pre>
     <div id="codeBox">
 <pre><code class="language-css">
 [      <font color="grey">//sorted from oldest to newest</font>
@@ -236,7 +236,7 @@
 </code></pre>
 </div>
     </li>
-    <li><strong>Address exists</strong>, parameters : [ <font color="#006187">address</font> ] <pre><code class="language-javascript">https://peerchain.co/api/v1/addressExist/<font color="#006187">PQ3MN6dnQmw34eFMcRPWuVsuW9eLBSfaEp</font></code></pre>
+    <li><strong>Address exists</strong>, parameters : [ <font color="#006187">address</font> ] <pre><code class="language-javascript">https://nuexplorer.ddns.net/api/v1/addressExist/<font color="#006187">PQ3MN6dnQmw34eFMcRPWuVsuW9eLBSfaEp</font></code></pre>
 <div id="codeBox">
 <pre><code class="language-css">{
     "exists": <font color="#E85900">true</font>    <font color="grey">//or false</font>
@@ -248,7 +248,7 @@
 <div id="addressAPI">
 <label><u>Network Status API</u></label>
 <ul>
-    <li><strong>Network Info</strong>, parameters : [ none ] <pre><code class="language-javascript">https://peerchain.co/api/v1/networkInfo/</code></pre>
+    <li><strong>Network Info</strong>, parameters : [ none ] <pre><code class="language-javascript">https://nuexplorer.ddns.net/api/v1/networkInfo/</code></pre>
     <div id="codeBox">
 <pre><code class="language-css">
 {

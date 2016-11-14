@@ -129,6 +129,8 @@ router.route('/numtrans').get(charts.numTrans);
 
 router.route('/parked').get(charts.parked);
 
+router.route('/sdd').get(charts.sdd);
+
 router.route('/orphan').get(charts.orphan);
 
 router.route('/solvedBy').get(charts.solvedBy);

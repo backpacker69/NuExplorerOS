@@ -56,6 +56,10 @@ var apiFactory = {};
         $window.document.title = "Chart | Parked";
         return $http.get('/api/parked');
     };
+    apiFactory.getSDDChart = function () {
+        $window.document.title = "Chart | SDD";
+        return $http.get('/api/sdd');
+    };
     apiFactory.getSizeChart = function () {
         return $http.get('/api/size');  
     };

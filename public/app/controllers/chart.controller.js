@@ -27,6 +27,11 @@ else if (whichChart === 'parked'){
         $scope.showChart = result;
     });
 }
+else if (whichChart === 'sdd'){
+    chartFactory.sdd().then(function(result){
+        $scope.showChart = result;
+    });
+}
 else if (whichChart === 'solvedby'){
 	chartFactory.bSolved().then(function(result){
 		$scope.showChart = result;

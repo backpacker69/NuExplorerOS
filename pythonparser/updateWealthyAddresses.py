@@ -54,6 +54,9 @@ for each in allTrans:
     txTimeStamp = each["TXdetails"]["tx_timeStamp"]
     forBlock = each["forBlock"]
     tx_blockHash = each["blockHash"]   
+    if 'Addresses' not in each:
+        continue
+
     Addresses = each["Addresses"]
     
     for k in Addresses:

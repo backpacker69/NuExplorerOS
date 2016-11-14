@@ -193,3 +193,18 @@ function compressArray(original) {
     });
 
 };
+
+
+exports.sdd = function(req,res) {
+
+
+    db.ChartCollection.find({_id:"sdd"},function(err,doc){
+
+
+        res.send(doc[0].sdd);
+
+
+
+
+    });
+};

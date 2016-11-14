@@ -6,6 +6,7 @@ angular.module('NE.chartFactory', ['NE.apiFactory']) //instantiates
 		numTrans: getNumTransChart,
 		orphan: getOrphanChart,
         parked: getParkedChart,
+        sdd: getSDDChart,
 		bSolved: getSolvedByChart,
 		toggleChart: toggleChart,
 
@@ -217,5 +218,52 @@ return {
   };
 };
 };
+
+function getSDDChart(){
+
+return apiFactory.getSDDChart().then(sendData);
+
+function sendData(response){
+
+return {
+   options:{
+    chart: {
+            type: 'line',
+            zoomType: 'x'
+
+        },
+    tooltip: {
+
+            valueSuffix: ''
+        }
+    },
+        title: {
+            text: 'Share Days Destroyed'
+        },
+        yAxis: {
+            title: {
+                text: 'SDD'
+            }
+        },
+        xAxis: {
+            type:'datetime'
+
+
+        },
+        subtitle:{
+
+                text: 'every 1440 blocks'
+            } ,
+
+        series: [{
+
+            name: 'share days destroyed',
+            data: response.data
+        }]
+  };
+};
+};
+
+
 
 }]);
